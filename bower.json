@@ -1,11 +1,10 @@
 {
   "name": "cornify",
   "version": "0.0.1",
+  "main": "cornify.js",
   "ignore": [
-    "bower.json"
-  ],
-  "dependencies": {
-  },
-  "devDependencies": {
-  }
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
 }
