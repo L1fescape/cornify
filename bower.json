@@ -1,0 +1,11 @@
+{
+  "name": "cornify",
+  "version": "0.0.1",
+  "ignore": [
+    "bower.json"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
