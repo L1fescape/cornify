@@ -21,7 +21,7 @@ var cornify_add = function(top, left) {
       , imageHost = "https://raw.github.com/L1fescape/cornify/master/"
 
     // randomly select an image, either a unicorn or a rainbow
-    var cornImage = host + "images/" + 
+    var cornImage = imageHost + "images/" + 
       ((Math.round(Math.random())) ? 
         "unicorn_" + Math.floor((Math.random()*unicorn_count)+1) + ".gif" :
         "rainbow_" + Math.floor((Math.random()*rainbow_count)+1) + ".gif")
