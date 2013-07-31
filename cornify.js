@@ -18,10 +18,13 @@ var cornify_add = function(top, left) {
       , left = left || Math.random() * windowWidth + 'px'
       , unicorn_count = 7
       , rainbow_count = 4
+      , imageHost = "https://raw.github.com/L1fescape/cornify/master/"
+
     // randomly select an image, either a unicorn or a rainbow
-    var cornImage = "images/" + ((Math.round(Math.random())) ? 
-      "unicorn_" + Math.floor((Math.random()*unicorn_count)+1) + ".gif" :
-      "rainbow_" + Math.floor((Math.random()*rainbow_count)+1) + ".gif")
+    var cornImage = host + "images/" + 
+      ((Math.round(Math.random())) ? 
+        "unicorn_" + Math.floor((Math.random()*unicorn_count)+1) + ".gif" :
+        "rainbow_" + Math.floor((Math.random()*rainbow_count)+1) + ".gif")
     img.setAttribute('src', cornImage);
     // used later as a query selector to find and clear cornified images
     img.setAttribute('class', 'cornify');
