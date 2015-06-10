@@ -1,73 +1,71 @@
-;(function() {
-  
-HTMLImageElement.prototype.setStyle = function(style) {
-    var image = this;
-    for (var prop in style) {
-        if (style.hasOwnProperty(prop)) {
-            image.style[prop] = style[prop];
-        }
-    }
+var _ = require('lodash');
+
+var imageUrlTemplate = _.template('https://raw.github.com/akenn/cornify/master/images/<%= type %>/<%= id %>.gif');
+var types = [{
+  name: 'unicorn',
+  count: 7
+}, {
+  name: 'rainbow',
+  count: 4
+}];
+
+var getImageSrc = function() {
+  var randomImg = _.sample(types);
+
+  return imageUrlTemplate({
+    type: randomImg.name,
+    id: _.random(randomImg.count)
+  });
 };
 
-var cornify_add = function(top, left) {
-    var windowHeight = window.innerHeight
-      , windowWidth = window.innerWidth
-      , body = document.getElementsByTagName('body')[0]
-      , img = document.createElement('img')
-      , top = top || Math.random() * windowHeight + 'px'
-      , left = left || Math.random() * windowWidth + 'px'
-      , unicorn_count = 7
-      , rainbow_count = 4
-      , imageHost = "https://raw.github.com/L1fescape/cornify/master/"
+var getRandomImage = function() {
+  var img = document.createElement('img');
+  img.src = getImageSrc();
+  img.className = 'cornify';
+  img.style = {
+    top: _.random(document.body.clientHeight),
+    left: _.random(document.body.clientWidth),
+    position: 'fixed',
+    transition: 'all .1s linear'
+  };
+  // img.onmouseover = function() {
+  //   var size = Math.random() + 0.5;
+  //   var angle = Math.random() * 15 + 1 + 'deg';
+  //   var transform = 'rotate(' + angle + ') scale(' + size + ',' + size + ')';
 
-    // randomly select an image, either a unicorn or a rainbow
-    var cornImage = imageHost + "images/" + 
-      ((Math.round(Math.random())) ? 
-        "unicorn_" + Math.floor((Math.random()*unicorn_count)+1) + ".gif" :
-        "rainbow_" + Math.floor((Math.random()*rainbow_count)+1) + ".gif")
-    img.setAttribute('src', cornImage);
-    // used later as a query selector to find and clear cornified images
-    img.setAttribute('class', 'cornify');
-    img.setStyle({
-        top: top,
-        left: left,
-        position: 'fixed',
-        transition: "all .1s linear"
-    });
-    img.onmouseover = function() {
-        var size = Math.random() + 0.5
-          , angle = Math.random() * 15 + 1 + "deg"
-          , transform = "rotate(" + angle + ") scale(" + size + "," + size + ")";
-        this.style.transform = transform;
-        this.style.WebkitTransform = transform;
-    };
-    img.onmouseout = function() {
-        var transform = "rotate(0deg) scale(1, 1)";
-        this.style.transform = transform;
-        this.style.WebkitTransform = transform;
-    };
+  //   this.style.transform = transform;
+  //   this.style.WebkitTransform = transform;
+  // };
 
-    body.appendChild(img);
+  // img.onmouseout = function() {
+  //   var transform = 'rotate(0deg) scale(1, 1)';
+  //   this.style.transform = transform;
+  //   this.style.WebkitTransform = transform;
+  // };
+
+  return img;
 };
 
-var cornify_clear = function() {
-  var images = document.querySelectorAll(".cornify");
-  for (var i = 0, j = images.length; i < j; i++) {
-    images[i].parentNode.removeChild(images[i]);
-  }
-}
+var add = function() {
+  var img = getRandomImage();
+  document.body.appendChild(img);
+};
 
+var clear = function() {
+  document.querySelector('.cornify').remove();
+};
 
-var cornify_pizzazz = function() {
-  for (var i = 0, j = Math.random()*100 + 1; i < j; i++) {
-    cornify.add();
-  }
+module.exports = {
+  add: add,
+  clear: clear
+};
+
+var pizzazz = function() {
+  _.times(_.random(0, 100), add);
 };
 
 window.cornify = {
-  add: cornify_add,
-  clear: cornify_clear,
-  pizzazz: cornify_pizzazz
+  add: add,
+  clear: clear,
+  pizzazz: pizzazz
 };
-
-})();

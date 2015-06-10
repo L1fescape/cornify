@@ -1,18 +1,33 @@
 {
   "name": "cornify",
-  "title": "cornify",
-  "description": "Share unicorns and rainbows with the masses.",
-  "version": "0.0.2",
-  "author": {
-    "name": "Andrew Kennedy",
-    "url": "http://akenn.org"
+  "version": "1.0.0",
+  "description": "Share love and happiness with the masses",
+  "main": "build.js",
+  "scripts": {
+    "build": "./node_modules/browserify/bin/cmd.js cornify.js > build.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/L1fescape/cornify.git"
+    "url": "https://github.com/akenn/cornify.git"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
-  "keywords": ["cornify", "unicorns", "rainbows", "love", "joy", "happiness"]
+  "keywords": [
+    "cornify",
+    "unicorns",
+    "rainbows",
+    "love",
+    "joy",
+    "prosperity"
+  ],
+  "author": "Andrew Kennedy <andrew@akenn.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akenn/cornify/issues"
+  },
+  "homepage": "https://github.com/akenn/cornify",
+  "dependencies": {
+    "lodash": "^3.8.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.0"
+  }
 }
