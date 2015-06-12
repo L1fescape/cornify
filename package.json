@@ -1,6 +1,6 @@
 {
-  "name": "cornify",
-  "version": "1.0.0",
+  "name": "unicornify",
+  "version": "1.0.1",
   "description": "Share love and happiness with the masses",
   "main": "build.js",
   "scripts": {

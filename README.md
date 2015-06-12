@@ -5,22 +5,59 @@ Cornify spreads eternal joy and happiness across the web by adding rainbows and 
 ## Install
 
 ```
-npm install cornify-technology
+npm install unicornify
+```
+
+## Build
+
+```
+npm install
+npm run build
 ```
 
 ## Functions
 
-##### Add some sparkle
+##### `add`
+> Appends a random cornify image to the page
 
-`cornify.add()`
+```
+cornify.add();
+//=> <img class="cornify" src="https://raw.github.com/akenn/cornify/master/images/rainbow/2.gif" />
+```
 
-##### Take it away
+##### `count`
+> Returns the number of cornify images on the page
 
-`cornify.clear()`
+```
+cornify.count();
+//=> 1
+```
 
-##### Party time
+##### `clear`
+> Remove all cornify images from the page
 
-`cornify.pizzazz()`
+```
+cornify.count();
+//=> 117
+
+cornify.clear();
+
+cornify.count();
+//=> 0
+```
+
+##### `pizzazz`
+> Party time
+
+```
+cornify.count();
+//=> 0
+
+cornify.pizzazz();
+
+cornify.count();
+//=> 239
+```
 
 ## Acknowledgements
 
