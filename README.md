@@ -5,7 +5,7 @@ Cornify spreads eternal joy and happiness across the web by adding rainbows and 
 ## Install
 
 ```
-npm install unicornify
+npm install cornified
 ```
 
 ## Build
