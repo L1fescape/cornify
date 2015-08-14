@@ -51,7 +51,7 @@ function add() {
   document.body.appendChild(createRandomImage());
 };
 
-module.exports = window.cornify = {
+module.exports = {
   add: add,
 
   count: function() {

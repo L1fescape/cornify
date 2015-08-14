@@ -2,10 +2,7 @@
   "name": "cornified",
   "version": "1.0.1",
   "description": "Share love and happiness with the masses",
-  "main": "build.js",
-  "scripts": {
-    "build": "./node_modules/browserify/bin/cmd.js cornify.js > build.js"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/akenn/cornify.git"
