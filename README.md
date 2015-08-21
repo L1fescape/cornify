@@ -21,6 +21,8 @@ npm run build
 > Appends a random cornify image to the page
 
 ```
+var cornify = require('cornified');
+
 cornify.add();
 //=> <img class="cornify" src="https://raw.github.com/akenn/cornify/master/images/rainbow/2.gif" />
 ```
