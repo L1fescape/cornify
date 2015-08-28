@@ -4,24 +4,59 @@ Cornify spreads eternal joy and happiness across the web by adding rainbows and 
 
 ## Install
 
+Cornify is available on both npm and bower as `cornified`.
+
+To install via npm:
+
 ```
 npm install cornified
 ```
 
-## Build
+To install via bower:
 
 ```
-npm install
-npm run build
+bower install cornified
 ```
 
-## Functions
+## Usage
+
+With node/browserify:
+
+```js
+var cornify = require('cornified');
+
+// add a random unicorn or rainbow to the page
+cornify.add();
+
+// remove all cornify images from the page
+cornify.clear();
+```
+
+With bower:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="bower_components/cornified/build.js"></script>
+</head>
+<body>
+  
+</body>
+<script>
+  cornify.add();
+  cornify.pizzazz();
+</script>
+</html>
+```
+
+
+## API
 
 ##### `add`
 > Appends a random cornify image to the page
 
 ```
-var cornify = require('cornified');
 
 cornify.add();
 //=> <img class="cornify" src="https://raw.github.com/akenn/cornify/master/images/rainbow/2.gif" />
@@ -60,6 +95,14 @@ cornify.pizzazz();
 cornify.count();
 //=> 239
 ```
+
+## Building
+
+```
+npm install
+npm run build
+```
+
 
 ## Acknowledgements
 

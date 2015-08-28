@@ -48,7 +48,7 @@ function createRandomImage() {
 };
 
 function add() {
-  document.body.appendChild(createRandomImage());
+  return document.body.appendChild(createRandomImage());
 };
 
 module.exports = {

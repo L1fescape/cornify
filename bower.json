@@ -1,0 +1,29 @@
+{
+  "name": "cornify",
+  "main": "build.js",
+  "version": "1.0.3",
+  "homepage": "https://github.com/akenn/cornify",
+  "authors": [
+    "Andrew Kennedy <andrew@akenn.org>"
+  ],
+  "description": "Share love and happiness with the masses",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "cornify",
+    "unicorns",
+    "rainbows",
+    "love",
+    "joy",
+    "prosperity"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
