@@ -1,7 +1,11 @@
-var _ = require('lodash');
+import template from 'lodash-es/template';
+import sample from 'lodash-es/sample';
+import random from 'lodash-es/random';
+import each from 'lodash-es/each';
+import times from 'lodash-es/times';
 
 var className = 'cornify';
-var imageUrlTemplate = _.template('https://raw.github.com/akenn/cornify/master/images/<%= type %>/<%= id %>.gif');
+var imageUrlTemplate = template('https://raw.github.com/akenn/cornify/master/images/<%= type %>/<%= id %>.gif');
 var types = [{
   name: 'unicorn',
   count: 7
@@ -11,11 +15,11 @@ var types = [{
 }];
 
 function getRandomImageSrc() {
-  var randomType = _.sample(types);
+  var randomType = sample(types);
 
   return imageUrlTemplate({
     type: randomType.name,
-    id: _.random(1, randomType.count)
+    id: random(1, randomType.count)
   });
 };
 
@@ -24,8 +28,8 @@ function createRandomImage() {
 
   img.src = getRandomImageSrc();
   img.className = className;
-  img.style.top = _.random(100) + '%';
-  img.style.left = _.random(100) + '%';
+  img.style.top = random(100) + '%';
+  img.style.left = random(100) + '%';
   img.style.position = 'fixed';
   img.style.transition = 'all .1s linear';
 
@@ -59,12 +63,12 @@ module.exports = {
   },
 
   clear: function() {
-    _.each(document.querySelectorAll('.' + className), function(node) {
+    each(document.querySelectorAll('.' + className), function(node) {
       node.parentNode.removeChild(node);
     });
   },
 
   pizzazz: function() {
-    _.times(_.random(10, 500), add);
+    times(random(10, 500), add);
   }
 };
