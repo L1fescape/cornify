@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akenn/cornify.git"
+    "url": "https://github.com/L1fescape/cornify.git"
   },
   "keywords": [
     "cornify",
@@ -18,9 +18,9 @@
   "author": "Andrew Kennedy <andrew@akenn.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akenn/cornify/issues"
+    "url": "https://github.com/L1fescape/cornify/issues"
   },
-  "homepage": "https://github.com/akenn/cornify",
+  "homepage": "https://github.com/L1fescape/cornify",
   "dependencies": {
     "lodash-es": "4.17.4"
   },
