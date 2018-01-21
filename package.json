@@ -2,7 +2,7 @@
   "name": "cornified",
   "version": "1.0.3",
   "description": "Share love and happiness with the masses",
-  "main": "build.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/akenn/cornify.git"
@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/akenn/cornify",
   "dependencies": {
-    "lodash": "^3.8.0"
+    "lodash-es": "4.17.4"
   },
   "devDependencies": {
-    "browserify": "^10.2.0"
+    "parcel-bundler": "1.4.1"
   },
   "scripts": {
-    "build": "./node_modules/browserify/bin/cmd.js index.js -s cornify > build.js"
+    "build": "parcel build index.js"
   }
 }

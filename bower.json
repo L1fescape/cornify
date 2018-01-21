@@ -1,6 +1,6 @@
 {
   "name": "cornify",
-  "main": "build.js",
+  "main": "dist/index.js",
   "version": "1.0.3",
   "homepage": "https://github.com/akenn/cornify",
   "authors": [
