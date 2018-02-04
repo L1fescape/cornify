@@ -25,9 +25,12 @@
     "lodash-es": "4.17.4"
   },
   "devDependencies": {
-    "parcel-bundler": "1.4.1"
+    "rollup": "0.55.3",
+    "rollup-plugin-commonjs": "8.3.0",
+    "rollup-plugin-node-resolve": "3.0.2",
+    "rollup-plugin-uglify": "3.0.0"
   },
   "scripts": {
-    "build": "parcel build index.js"
+    "build": "rollup --config"
   }
 }
