@@ -25,7 +25,7 @@
     "lodash-es": "4.17.4"
   },
   "devDependencies": {
-    "parcel-bundler": "1.4.1"
+    "parcel-bundler": "1.10.0"
   },
   "scripts": {
     "build": "parcel build index.js"
