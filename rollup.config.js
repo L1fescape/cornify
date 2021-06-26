@@ -1,6 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import uglify from 'rollup-plugin-uglify-es';
+import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: './index.js',
@@ -12,6 +12,6 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    uglify()
+    terser()
   ]
 };
