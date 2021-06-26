@@ -21,7 +21,7 @@ function getRandomImageSrc() {
     type: randomType.name,
     id: random(1, randomType.count)
   });
-};
+}
 
 function createRandomImage() {
   var img = document.createElement('img');
@@ -49,13 +49,13 @@ function createRandomImage() {
   };
 
   return img;
-};
+}
 
 function add() {
   return document.body.appendChild(createRandomImage());
-};
+}
 
-module.exports = {
+export default {
   add: add,
 
   count: function() {
