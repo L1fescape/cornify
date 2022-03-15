@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/L1fescape/cornify",
   "dependencies": {
-    "lodash-es": "4.17.4"
+    "lodash-es": "4.17.21"
   },
   "devDependencies": {
     "parcel-bundler": "1.10.0"
